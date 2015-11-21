@@ -10,41 +10,13 @@ def percent_match( seq1, seq2 ):
 Å†Å†Å†Å†print "percent_match \nÅ†Å†Å†Å†returns the percentage of complementarity between two strings of bases\n"
 Å†Å†Å†Å†#assume both strings are passed '3 --> '5Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†
 Å†Å†Å†Å†#reverse one string for binding
-	reverse(seq1)
-	len1 = len(seq1)
-	len2 = len(seq2)
-	num_matches = 0
-	num_comped = 0
-	p1 = len1 - 1
-	p2 = 0
-	while (p2 < len2):
-		num_matches += substring_match(seq1[p1:], seq2[p2:]) ]
-		num_comped += len(seq1[p1:])
-		if (p1 > 0):
-			p1--
-		else:
-			p2++
-	return num_matches
-Å†Å†Å†Å†Å
+Å†Å†Å†Å†Å†Å†
 #dictionary saves number of matches as key and indexes of each array in the value array
 #maximum key value is saved as is to reduce number of values saved in the dictionary
-def find_binding_sites( seq1, seq2 ):
-Å†Å†Å†Å†reverse(seq1)†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†
-	len1 = len(seq1)
-	len2 = len(seq2)
-	max_val = 0
-	num_matches = {}
-	p1 = len1 - 1
-	p2 = 0
-	while (p2 < len2):
-		num_matches[ substring_match(seq1[p1:], seq2[p2:]) ] += (p1, p2)
-		if (p1 > 0):
-			p1--
-		else:
-			p2++
-	max_val = max(num_matches.keys())
-	return [max_val, dict[max_val]]
-	#returns array of a num and an array of the coordinates
+def find_binding_site( seq1, seq2 ):
+Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†Å†
+
+
 	
 #runs on two substrings; they may be different length
 def substring_match( sub1, sub2 ):
