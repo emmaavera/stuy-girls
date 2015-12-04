@@ -1,0 +1,13 @@
+Hi Mary!
+
+Okay so here is what we need to have done for Dennis by Monday (because from Meet's lack of response I'm going to asuume that you're still meeting then)
+
+1. Translate Salman's java code into python; I'll try to work on this but it shouldn't be too hard.  We're going to need to implement objects in python which is a bit of a hassle, but it shouldn't be too difficult.  
+2. We need to write a genetic algorithm to control strand generation.
+
+In the test file there are some comments about errors with array shifting which should be really easy to fix b/c it looks like Salman just doesn't control for the array length very well.
+On a second glance, the tester file is just subpar and unfinished.
+
+Focus in translating Strand.java b/c it has most of the operations that we'll need for our genalg.
+
+I'll upload a strat for the genalg soon!
