@@ -11,3 +11,8 @@ On a second glance, the tester file is just subpar and unfinished.
 Focus in translating Strand.java b/c it has most of the operations that we'll need for our genalg.
 
 I'll upload a strat for the genalg soon!
+
+Soon:
+- genetic representation of the solution domain
+- fitness function 
+  - you're going to want to make the fitness function operate on strands using the BP file to determine what's up w/each Strand
